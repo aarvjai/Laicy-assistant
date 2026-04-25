@@ -12,7 +12,7 @@
     --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.1);
     --text: #f0f0f5; --text2: #8888aa; --text3: #555570;
     --accent: #7c6ff7; --accent2: #a89df9; --accent-glow: rgba(124,111,247,0.15);
-    --green: #4ade80; --orange: #fb923c; --red: #f87171; --blue: #60a5fa;
+    --green: #4ade80; --orange: #fb923c; --red: #f87171;
   }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
 
@@ -20,25 +20,24 @@
   .logo-mark { width: 64px; height: 64px; border-radius: 20px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 1.5rem; position: relative; }
   .logo-mark::after { content: ''; position: absolute; inset: -8px; border-radius: 28px; border: 1px solid rgba(124,111,247,0.3); }
   #api-screen h1 { font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem; }
-  #api-screen p { color: var(--text2); margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; max-width: 400px; }
+  #api-screen p { color: var(--text2); margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; max-width: 420px; }
   .api-input-wrap { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 0.75rem; }
   .api-input-wrap input { background: var(--surface2); border: 1px solid var(--border2); border-radius: 12px; padding: 0.875rem 1rem; color: var(--text); font-family: 'DM Mono', monospace; font-size: 0.8rem; outline: none; transition: border-color 0.2s; }
   .api-input-wrap input:focus { border-color: var(--accent); }
   .api-input-wrap input::placeholder { color: var(--text3); }
-  .btn-primary { background: var(--accent); border: none; border-radius: 12px; padding: 0.875rem 1.5rem; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: opacity 0.2s, transform 0.1s; }
-  .btn-primary:hover { opacity: 0.9; }
-  .btn-primary:active { transform: scale(0.98); }
-  .hint { font-size: 0.78rem; color: var(--text3); margin-top: 0.5rem; }
+  .btn-primary { background: var(--accent); border: none; border-radius: 12px; padding: 0.875rem 1.5rem; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.88; }
+  .hint { font-size: 0.78rem; color: var(--text3); }
   .hint a { color: var(--accent2); text-decoration: none; }
 
   #main-app { display: none; flex-direction: row; height: 100vh; overflow: hidden; }
 
-  .sidebar { width: 280px; min-width: 280px; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
+  .sidebar { width: 270px; min-width: 270px; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
   .sidebar-header { padding: 1.25rem 1.25rem 1rem; border-bottom: 1px solid var(--border); }
-  .app-title { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.01em; }
+  .app-title { font-size: 1.1rem; font-weight: 600; }
   .app-sub { font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
   .date-display { padding: 0.875rem 1.25rem; border-bottom: 1px solid var(--border); font-size: 0.8rem; color: var(--text2); }
-  .date-display strong { display: block; color: var(--text); font-size: 0.95rem; font-weight: 500; margin-bottom: 1px; }
+  .date-display strong { display: block; color: var(--text); font-size: 0.9rem; font-weight: 500; margin-bottom: 1px; }
   .tasks-section { flex: 1; overflow-y: auto; padding: 1rem; }
   .tasks-section::-webkit-scrollbar { width: 3px; }
   .tasks-section::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
@@ -46,15 +45,15 @@
   .task-count { background: var(--accent); color: white; border-radius: 20px; font-size: 0.65rem; padding: 1px 7px; font-weight: 600; }
   .task-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 0.875rem; margin-bottom: 0.5rem; transition: border-color 0.2s; }
   .task-card:hover { border-color: var(--border2); }
-  .task-card.done { opacity: 0.45; }
+  .task-card.done { opacity: 0.4; }
   .task-card.done .task-name { text-decoration: line-through; }
   .task-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
   .task-name { font-size: 0.85rem; font-weight: 500; line-height: 1.3; flex: 1; }
-  .priority-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 3px; flex-shrink: 0; }
+  .priority-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
   .priority-dot.high { background: var(--red); }
   .priority-dot.medium { background: var(--orange); }
   .priority-dot.low { background: var(--green); }
-  .task-meta { font-size: 0.72rem; color: var(--text3); display: flex; gap: 8px; align-items: center; }
+  .task-meta { font-size: 0.72rem; color: var(--text3); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .task-time { font-family: 'DM Mono', monospace; }
   .deadline-badge { font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; background: rgba(251,146,60,0.15); color: var(--orange); border: 1px solid rgba(251,146,60,0.2); }
   .deadline-badge.urgent { background: rgba(248,113,113,0.15); color: var(--red); border-color: rgba(248,113,113,0.2); }
@@ -62,24 +61,24 @@
   .task-btn { font-size: 0.68rem; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border2); background: transparent; color: var(--text3); cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.15s; }
   .task-btn:hover { color: var(--text); background: var(--surface3); }
   .task-btn.danger:hover { color: var(--red); border-color: rgba(248,113,113,0.3); }
-  .empty-tasks { text-align: center; padding: 2rem 1rem; color: var(--text3); font-size: 0.8rem; line-height: 1.6; }
+  .empty-tasks { text-align: center; padding: 2rem 1rem; color: var(--text3); font-size: 0.8rem; line-height: 1.7; }
 
   .chat-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
   .chat-header { padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; background: var(--surface); }
-  .lacy-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #a78bfa); display: flex; align-items: center; justify-content: center; font-size: 16px; position: relative; }
+  .lacy-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #a78bfa); display: flex; align-items: center; justify-content: center; font-size: 16px; position: relative; flex-shrink: 0; }
   .status-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); position: absolute; bottom: 0; right: 0; border: 2px solid var(--surface); }
   .chat-header-info h2 { font-size: 0.95rem; font-weight: 600; }
   .chat-header-info p { font-size: 0.72rem; color: var(--text3); }
   .listening-indicator { margin-left: auto; display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--accent2); opacity: 0; transition: opacity 0.3s; }
   .listening-indicator.active { opacity: 1; }
   .pulse-ring { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 1.2s ease-in-out infinite; }
-  @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.6; } }
+  @keyframes pulse { 0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.4);opacity:0.6;} }
 
   .messages { flex: 1; overflow-y: auto; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
   .messages::-webkit-scrollbar { width: 3px; }
   .messages::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
-  .msg { display: flex; flex-direction: column; max-width: 75%; animation: msgIn 0.25s ease-out; }
-  @keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .msg { display: flex; flex-direction: column; max-width: 78%; animation: msgIn 0.25s ease-out; }
+  @keyframes msgIn { from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);} }
   .msg.user { align-self: flex-end; align-items: flex-end; }
   .msg.lacy { align-self: flex-start; align-items: flex-start; }
   .msg-bubble { padding: 0.75rem 1rem; border-radius: 16px; font-size: 0.875rem; line-height: 1.55; }
@@ -88,23 +87,22 @@
   .msg-time { font-size: 0.65rem; color: var(--text3); margin-top: 3px; padding: 0 4px; font-family: 'DM Mono', monospace; }
   .typing-bubble { background: var(--surface2); border: 1px solid var(--border); border-radius: 16px; border-bottom-left-radius: 4px; padding: 0.75rem 1rem; display: flex; gap: 4px; align-items: center; }
   .typing-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text3); animation: typingDot 1.2s ease-in-out infinite; }
-  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes typingDot { 0%, 80%, 100% { transform: scale(1); opacity: 0.5; } 40% { transform: scale(1.2); opacity: 1; } }
+  .typing-dot:nth-child(2){animation-delay:0.2s;}.typing-dot:nth-child(3){animation-delay:0.4s;}
+  @keyframes typingDot{0%,80%,100%{transform:scale(1);opacity:0.5;}40%{transform:scale(1.2);opacity:1;}}
 
   .input-area { padding: 1rem 1.5rem 1.25rem; border-top: 1px solid var(--border); background: var(--surface); display: flex; flex-direction: column; gap: 0.75rem; }
-  .transcript-display { min-height: 20px; font-size: 0.8rem; color: var(--text2); font-style: italic; display: none; }
+  .transcript-display { min-height: 18px; font-size: 0.8rem; color: var(--accent2); font-style: italic; display: none; }
   .transcript-display.active { display: block; }
-  .input-row { display: flex; gap: 0.75rem; align-items: center; }
-  .text-input { flex: 1; background: var(--surface2); border: 1px solid var(--border2); border-radius: 12px; padding: 0.75rem 1rem; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.875rem; outline: none; transition: border-color 0.2s; resize: none; }
+  .input-row { display: flex; gap: 0.75rem; align-items: flex-end; }
+  .text-input { flex: 1; background: var(--surface2); border: 1px solid var(--border2); border-radius: 12px; padding: 0.75rem 1rem; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.875rem; outline: none; transition: border-color 0.2s; resize: none; min-height: 48px; max-height: 120px; }
   .text-input:focus { border-color: var(--accent); }
   .text-input::placeholder { color: var(--text3); }
-  .voice-btn { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--border2); background: var(--surface2); color: var(--text2); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; flex-shrink: 0; }
-  .voice-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .voice-btn.recording { background: var(--accent); border-color: var(--accent); color: white; animation: recordPulse 1.5s ease-in-out infinite; }
-  @keyframes recordPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(124,111,247,0.4); } 50% { box-shadow: 0 0 0 12px rgba(124,111,247,0); } }
-  .send-btn { width: 48px; height: 48px; border-radius: 50%; border: none; background: var(--accent); color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; flex-shrink: 0; }
-  .send-btn:hover { opacity: 0.85; }
+  .icon-btn { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--border2); background: var(--surface2); color: var(--text2); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; flex-shrink: 0; }
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .icon-btn.recording { background: var(--accent); border-color: var(--accent); color: white; animation: recordPulse 1.5s ease-in-out infinite; }
+  .icon-btn.send { background: var(--accent); border-color: var(--accent); color: white; }
+  .icon-btn.send:hover { opacity: 0.85; }
+  @keyframes recordPulse{0%,100%{box-shadow:0 0 0 0 rgba(124,111,247,0.4);}50%{box-shadow:0 0 0 12px rgba(124,111,247,0);}}
   .quick-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
   .quick-btn { font-size: 0.72rem; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border2); background: transparent; color: var(--text2); cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.15s; white-space: nowrap; }
   .quick-btn:hover { border-color: var(--accent); color: var(--accent2); background: var(--accent-glow); }
@@ -116,11 +114,11 @@
 <div id="api-screen">
   <div class="logo-mark">✦</div>
   <h1>Meet Lacy</h1>
-  <p>Your AI life assistant. Enter your Anthropic API key to get started — it stays in your browser only.</p>
+  <p>Your AI life assistant, powered by Google Gemini. Enter your free Gemini API key to get started — it stays in your browser only.</p>
   <div class="api-input-wrap">
-    <input type="password" id="api-key-input" placeholder="sk-ant-api03-..." autocomplete="off" />
+    <input type="password" id="api-key-input" placeholder="AIzaSy..." autocomplete="off" />
     <button class="btn-primary" onclick="startApp()">Start talking to Lacy</button>
-    <p class="hint">Get your key at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> → API Keys</p>
+    <p class="hint">Get your free key at <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com</a> → Get API Key</p>
   </div>
 </div>
 
@@ -159,7 +157,7 @@
       <div class="transcript-display" id="transcript"></div>
       <div class="input-row">
         <textarea class="text-input" id="text-input" placeholder="Talk to Lacy or type here..." rows="1" onkeydown="handleKey(event)"></textarea>
-        <button class="voice-btn" id="voice-btn" onclick="toggleVoice()">
+        <button class="icon-btn" id="voice-btn" onclick="toggleVoice()" title="Click to speak">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
             <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
@@ -167,7 +165,7 @@
             <line x1="8" y1="23" x2="16" y2="23"/>
           </svg>
         </button>
-        <button class="send-btn" onclick="sendMessage()">
+        <button class="icon-btn send" onclick="sendMessage()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="22" y1="2" x2="11" y2="13"/>
             <polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -188,46 +186,48 @@ let conversationHistory = [];
 let recognition = null;
 let isRecording = false;
 
-const SYSTEM_PROMPT = `You are Lacy, a warm, smart, and proactive AI life assistant — like a brilliant best friend who keeps your life organized. You're conversational, natural, and never robotic.
+const SYSTEM_PROMPT = `You are Lacy, a warm, smart, proactive AI life assistant — like a brilliant best friend who keeps your life organised. You're conversational and natural, never robotic or repetitive.
 
-You manage the user's tasks with full intelligence. You have access to their task list which is provided in each message.
+You manage the user's tasks intelligently. Their current task list is included in every message.
 
-CORE BEHAVIORS:
-- Talk like a real friend, not a bot. Use natural language, contractions, personality.
-- Be proactive — if you see a scheduling conflict, bad timing, or a better approach, mention it.
-- When adding tasks, extract EXACTLY: task name (clean, no filler words), time (exact as stated), date, priority, and deadline if mentioned.
-- If a time is ambiguous, ask. If a deadline seems tight, warn the user.
-- Suggest better times based on what's already scheduled.
-- Remember context within the conversation.
+CORE BEHAVIOURS:
+- Talk like a real friend. Use contractions, warmth, personality. Never sound like a bot.
+- Be proactive — flag scheduling conflicts, tight deadlines, or better time slots.
+- Extract task details accurately: clean name, exact time, date, priority, deadline.
+- Never repeat the same response twice. Never say "I'm here to help" or list your own capabilities unprompted.
+- Keep replies short for simple actions (1-2 sentences). Give detail only for briefings or complex questions.
 
-TASK ACTIONS — when performing actions, embed this exact JSON in your response:
-Add task: <ACTION>{"type":"add","name":"Clean task name","time":"HH:MM","date":"YYYY-MM-DD","priority":"high|medium|low","deadline":"YYYY-MM-DD or null"}</ACTION>
+TASK ACTIONS — embed this JSON in your reply when performing actions:
+Add: <ACTION>{"type":"add","name":"Clean task name","time":"HH:MM","date":"YYYY-MM-DD","priority":"high|medium|low","deadline":"YYYY-MM-DD or null"}</ACTION>
 Update priority: <ACTION>{"type":"update","id":TASK_ID,"priority":"high|medium|low"}</ACTION>
-Delete task: <ACTION>{"type":"delete","id":TASK_ID}</ACTION>
+Delete: <ACTION>{"type":"delete","id":TASK_ID}</ACTION>
 Mark done: <ACTION>{"type":"done","id":TASK_ID}</ACTION>
 
-TASK NAME EXTRACTION RULES:
-"add a gym task for 5pm" → name: "Gym"
-"remind me to call mom at 3" → name: "Call Mom"
-"I need to study tonight at 8" → name: "Study Session"
-"schedule dentist tomorrow" → name: "Dentist Appointment"
+TASK NAME RULES — strip all filler words:
+"add a gym task for 5pm" → "Gym"
+"remind me to call mom at 3" → "Call Mom"
+"I need to study tonight at 8" → "Study Session"
+"schedule dentist tomorrow" → "Dentist Appointment"
+"add team meeting at 2pm" → "Team Meeting"
 
-TIME EXTRACTION — always exact:
-"5pm" → "17:00", "3am" → "03:00", "noon" → "12:00", "5:00 p.m." → "17:00"
+TIME RULES — always use exact spoken time, no offsets:
+"5pm" → "17:00" | "3am" → "03:00" | "noon" → "12:00" | "half 3" → "15:30" | "3:00 p.m." → "15:00" | "5:00 p.m." → "17:00"
 
-TODAY'S DATE: ${new Date().toISOString().split('T')[0]}
+DATE RULES:
+"today" → ${new Date().toISOString().split('T')[0]}
+"tomorrow" → ${new Date(Date.now()+86400000).toISOString().split('T')[0]}
+No date mentioned → assume today
 
 PERSONALITY:
-- Warm greetings based on time of day
-- Celebrate completions
-- Gentle nudges for deadlines
-- Smart scheduling suggestions
-- Never repeat canned responses
-- Keep it concise for simple tasks, detailed for briefings`;
+- Greet based on time of day
+- Celebrate task completions enthusiastically
+- Gently warn about tight deadlines
+- Suggest better time slots when you spot a gap
+- Use occasional light humour`;
 
 function startApp() {
   const key = document.getElementById('api-key-input').value.trim();
-  if (!key || !key.startsWith('sk-ant')) { showError('Please enter a valid Anthropic API key (starts with sk-ant-)'); return; }
+  if (!key) { showError('Please enter your Gemini API key'); return; }
   apiKey = key;
   document.getElementById('api-screen').style.display = 'none';
   document.getElementById('main-app').style.display = 'flex';
@@ -242,156 +242,155 @@ function updateDateDisplay() {
   const now = new Date();
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  document.getElementById('date-display').innerHTML = `<strong>${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}</strong>${now.getHours() < 12 ? 'Good morning' : now.getHours() < 17 ? 'Good afternoon' : 'Good evening'}`;
+  document.getElementById('date-display').innerHTML = `<strong>${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}</strong>${now.getHours()<12?'Good morning':now.getHours()<17?'Good afternoon':'Good evening'}`;
 }
 
 function getTaskContext() {
-  if (tasks.length === 0) return 'No tasks scheduled yet.';
-  return tasks.map(t => `[ID:${t.id}] ${t.name} at ${t.time||'no time'} on ${t.date} (${t.priority} priority)${t.deadline ? ' | Deadline: '+t.deadline : ''}${t.done ? ' [DONE]' : ''}`).join('\n');
+  if (tasks.length === 0) return 'No tasks yet.';
+  return tasks.map(t => `[ID:${t.id}] ${t.name} | time:${t.time||'none'} | date:${t.date} | priority:${t.priority}${t.deadline?' | deadline:'+t.deadline:''}${t.done?' | DONE':''}`).join('\n');
 }
 
 function formatTime(t) {
   if (!t) return '';
-  const [h, m] = t.split(':').map(Number);
-  return `${h % 12 || 12}:${String(m).padStart(2,'0')} ${h >= 12 ? 'PM' : 'AM'}`;
+  const [h,m] = t.split(':').map(Number);
+  return `${h%12||12}:${String(m).padStart(2,'0')} ${h>=12?'PM':'AM'}`;
 }
 
 function getDaysUntil(d) {
   if (!d) return null;
-  return Math.ceil((new Date(d) - new Date()) / 86400000);
+  return Math.ceil((new Date(d)-new Date())/86400000);
 }
 
 function renderTasks() {
   const list = document.getElementById('task-list');
-  document.getElementById('task-count').textContent = tasks.filter(t => !t.done).length;
-  if (tasks.length === 0) { list.innerHTML = '<div class="empty-tasks">No tasks yet.<br>Ask Lacy to add something!</div>'; return; }
-  const sorted = [...tasks].sort((a,b) => a.date.localeCompare(b.date) || (a.time||'').localeCompare(b.time||''));
-  list.innerHTML = sorted.map(t => {
-    const du = getDaysUntil(t.deadline);
-    const db = t.deadline ? `<span class="deadline-badge ${du <= 1 ? 'urgent' : ''}">${du < 0 ? 'Overdue' : du === 0 ? 'Due today' : du === 1 ? 'Due tomorrow' : du+'d left'}</span>` : '';
+  document.getElementById('task-count').textContent = tasks.filter(t=>!t.done).length;
+  if (tasks.length===0) { list.innerHTML='<div class="empty-tasks">No tasks yet.<br>Ask Lacy to add something!</div>'; return; }
+  const sorted = [...tasks].sort((a,b)=>a.date.localeCompare(b.date)||(a.time||'').localeCompare(b.time||''));
+  list.innerHTML = sorted.map(t=>{
+    const du=getDaysUntil(t.deadline);
+    const db=t.deadline?`<span class="deadline-badge ${du<=1?'urgent':''}">${du<0?'Overdue':du===0?'Due today':du===1?'Due tomorrow':du+'d left'}</span>`:'';
     return `<div class="task-card ${t.done?'done':''}">
       <div class="task-header"><span class="task-name">${t.name}</span><div class="priority-dot ${t.priority}"></div></div>
-      <div class="task-meta">${t.time ? `<span class="task-time">${formatTime(t.time)}</span>` : ''}${db}</div>
-      <div class="task-actions">${!t.done ? `<button class="task-btn" onclick="quickDone(${t.id})">Done</button>` : ''}<button class="task-btn danger" onclick="quickDelete(${t.id})">Remove</button></div>
+      <div class="task-meta">${t.time?`<span class="task-time">${formatTime(t.time)}</span>`:''}${db}</div>
+      <div class="task-actions">${!t.done?`<button class="task-btn" onclick="quickDone(${t.id})">Done</button>`:''}<button class="task-btn danger" onclick="quickDelete(${t.id})">Remove</button></div>
     </div>`;
   }).join('');
 }
 
-function quickDone(id) { const t = tasks.find(x => x.id===id); if(t) { t.done=true; renderTasks(); } }
-function quickDelete(id) { tasks = tasks.filter(x => x.id!==id); renderTasks(); }
+function quickDone(id){const t=tasks.find(x=>x.id===id);if(t){t.done=true;renderTasks();}}
+function quickDelete(id){tasks=tasks.filter(x=>x.id!==id);renderTasks();}
 
 function processActions(text) {
-  const re = /<ACTION>(.*?)<\/ACTION>/gs;
+  const re=/<ACTION>([\s\S]*?)<\/ACTION>/g;
   let m;
-  while ((m = re.exec(text)) !== null) {
+  while((m=re.exec(text))!==null){
     try {
-      const a = JSON.parse(m[1]);
-      const today = new Date().toISOString().split('T')[0];
-      if (a.type === 'add') tasks.push({ id: taskIdCounter++, name: a.name, time: a.time||null, date: a.date||today, priority: a.priority||'medium', deadline: a.deadline||null, done: false });
-      else if (a.type === 'update') { const t = tasks.find(x => x.id===a.id); if(t && a.priority) t.priority = a.priority; }
-      else if (a.type === 'delete') tasks = tasks.filter(x => x.id!==a.id);
-      else if (a.type === 'done') { const t = tasks.find(x => x.id===a.id); if(t) t.done=true; }
-    } catch(e) {}
+      const a=JSON.parse(m[1]);
+      const today=new Date().toISOString().split('T')[0];
+      if(a.type==='add') tasks.push({id:taskIdCounter++,name:a.name,time:a.time||null,date:a.date||today,priority:a.priority||'medium',deadline:a.deadline||null,done:false});
+      else if(a.type==='update'){const t=tasks.find(x=>x.id===a.id);if(t&&a.priority)t.priority=a.priority;}
+      else if(a.type==='delete')tasks=tasks.filter(x=>x.id!==a.id);
+      else if(a.type==='done'){const t=tasks.find(x=>x.id===a.id);if(t)t.done=true;}
+    }catch(e){}
   }
   renderTasks();
-  return text.replace(re, '').trim();
+  return text.replace(/<ACTION>[\s\S]*?<\/ACTION>/g,'').trim();
 }
 
-function addMessage(role, text) {
-  const msgs = document.getElementById('messages');
-  const now = new Date();
-  const div = document.createElement('div');
-  div.className = `msg ${role}`;
-  div.innerHTML = `<div class="msg-bubble">${text.replace(/\n/g,'<br>')}</div><div class="msg-time">${now.getHours()}:${String(now.getMinutes()).padStart(2,'0')}</div>`;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
+function addMessage(role,text){
+  const msgs=document.getElementById('messages');
+  const now=new Date();
+  const div=document.createElement('div');
+  div.className=`msg ${role}`;
+  div.innerHTML=`<div class="msg-bubble">${text.replace(/\n/g,'<br>')}</div><div class="msg-time">${now.getHours()}:${String(now.getMinutes()).padStart(2,'0')}</div>`;
+  msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
 }
 
-function showTyping() {
-  const msgs = document.getElementById('messages');
-  const div = document.createElement('div');
-  div.className = 'msg lacy'; div.id = 'typing';
-  div.innerHTML = `<div class="typing-bubble"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
-  msgs.appendChild(div); msgs.scrollTop = msgs.scrollHeight;
+function showTyping(){
+  const msgs=document.getElementById('messages');
+  const div=document.createElement('div');
+  div.className='msg lacy';div.id='typing';
+  div.innerHTML='<div class="typing-bubble"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+  msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
 }
 
-function hideTyping() { const t = document.getElementById('typing'); if(t) t.remove(); }
+function hideTyping(){const t=document.getElementById('typing');if(t)t.remove();}
 
-async function sendToLacy(userText) {
-  if (!userText.trim()) return;
-  addMessage('user', userText);
-  conversationHistory.push({ role: 'user', content: `${userText}\n\n[Tasks:\n${getTaskContext()}]` });
+async function sendToLacy(userText){
+  if(!userText.trim())return;
+  addMessage('user',userText);
+  conversationHistory.push({role:'user',content:`${userText}\n\n[Current tasks:\n${getTaskContext()}]`});
   showTyping();
-  document.getElementById('lacy-status').textContent = 'Thinking...';
+  document.getElementById('lacy-status').textContent='Thinking...';
   try {
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ apiKey, messages: conversationHistory, system: SYSTEM_PROMPT })
+    const res=await fetch('/api/chat',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({apiKey,messages:conversationHistory,system:SYSTEM_PROMPT})
     });
-    if (!res.ok) throw new Error((await res.json()).error || 'Server error');
-    const data = await res.json();
-    const raw = data.content || "Sorry, I didn't catch that.";
-    conversationHistory.push({ role: 'assistant', content: raw });
-    const clean = processActions(raw);
+    if(!res.ok){const e=await res.json();throw new Error(e.error||'Server error');}
+    const data=await res.json();
+    const raw=data.content||"Sorry, I didn't catch that.";
+    conversationHistory.push({role:'assistant',content:raw});
+    const clean=processActions(raw);
     hideTyping();
-    addMessage('lacy', clean);
-    document.getElementById('lacy-status').textContent = 'Your personal AI life assistant';
+    addMessage('lacy',clean);
+    document.getElementById('lacy-status').textContent='Your personal AI life assistant';
     speakText(clean);
-  } catch(e) {
+  } catch(e){
     hideTyping();
-    document.getElementById('lacy-status').textContent = 'Your personal AI life assistant';
-    showError('Error: ' + e.message);
+    document.getElementById('lacy-status').textContent='Your personal AI life assistant';
+    showError('Error: '+e.message);
   }
 }
 
-function speakText(text) {
-  if (!window.speechSynthesis) return;
+function speakText(text){
+  if(!window.speechSynthesis)return;
   window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text.replace(/[<>*#`\n]/g,' ').trim());
-  u.rate = 1.05; u.pitch = 1.0; u.volume = 0.9;
-  const v = speechSynthesis.getVoices().find(v => v.name.includes('Samantha') || v.name.includes('Karen') || v.name.includes('Female'));
-  if (v) u.voice = v;
+  const u=new SpeechSynthesisUtterance(text.replace(/[<>*#`\n]/g,' ').trim());
+  u.rate=1.05;u.pitch=1.0;u.volume=0.9;
+  const v=speechSynthesis.getVoices().find(v=>v.name.includes('Samantha')||v.name.includes('Karen')||v.name.includes('Moira'));
+  if(v)u.voice=v;
   speechSynthesis.speak(u);
 }
 
-function sendMessage() {
-  const inp = document.getElementById('text-input');
-  const t = inp.value.trim(); if (!t) return;
-  inp.value = ''; inp.style.height = 'auto'; sendToLacy(t);
+function sendMessage(){
+  const inp=document.getElementById('text-input');
+  const t=inp.value.trim();if(!t)return;
+  inp.value='';inp.style.height='auto';sendToLacy(t);
 }
 
-function handleKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }
-function sendQuick(t) { sendToLacy(t); }
+function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}}
+function sendQuick(t){sendToLacy(t);}
 
-function initSpeechRecognition() {
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SR) return;
-  recognition = new SR();
-  recognition.continuous = false; recognition.interimResults = true; recognition.lang = 'en-US';
-  recognition.onresult = e => {
-    const t = Array.from(e.results).map(r => r[0].transcript).join('');
-    const el = document.getElementById('transcript');
-    el.textContent = t; el.classList.add('active');
-    if (e.results[e.results.length-1].isFinal) { el.classList.remove('active'); toggleVoice(); sendToLacy(t); }
+function initSpeechRecognition(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR)return;
+  recognition=new SR();
+  recognition.continuous=false;recognition.interimResults=true;recognition.lang='en-US';
+  recognition.onresult=e=>{
+    const t=Array.from(e.results).map(r=>r[0].transcript).join('');
+    const el=document.getElementById('transcript');
+    el.textContent=t;el.classList.add('active');
+    if(e.results[e.results.length-1].isFinal){el.classList.remove('active');toggleVoice();sendToLacy(t);}
   };
-  recognition.onend = () => { isRecording = false; document.getElementById('voice-btn').classList.remove('recording'); document.getElementById('listening-indicator').classList.remove('active'); };
+  recognition.onend=()=>{isRecording=false;document.getElementById('voice-btn').classList.remove('recording');document.getElementById('listening-indicator').classList.remove('active');};
 }
 
-function toggleVoice() {
-  if (!recognition) { showError('Voice not supported. Try Chrome.'); return; }
-  if (isRecording) { recognition.stop(); isRecording = false; document.getElementById('voice-btn').classList.remove('recording'); document.getElementById('listening-indicator').classList.remove('active'); }
-  else { speechSynthesis?.cancel(); recognition.start(); isRecording = true; document.getElementById('voice-btn').classList.add('recording'); document.getElementById('listening-indicator').classList.add('active'); }
+function toggleVoice(){
+  if(!recognition){showError('Voice not supported. Use Chrome.');return;}
+  if(isRecording){recognition.stop();isRecording=false;document.getElementById('voice-btn').classList.remove('recording');document.getElementById('listening-indicator').classList.remove('active');}
+  else{speechSynthesis?.cancel();recognition.start();isRecording=true;document.getElementById('voice-btn').classList.add('recording');document.getElementById('listening-indicator').classList.add('active');}
 }
 
-function showError(msg) {
-  const t = document.getElementById('error-toast'); t.textContent = msg; t.style.display = 'block';
-  setTimeout(() => t.style.display = 'none', 4000);
+function showError(msg){
+  const t=document.getElementById('error-toast');t.textContent=msg;t.style.display='block';
+  setTimeout(()=>t.style.display='none',5000);
 }
 
-document.getElementById('api-key-input').addEventListener('keydown', e => { if(e.key==='Enter') startApp(); });
-document.getElementById('text-input').addEventListener('input', function() { this.style.height='auto'; this.style.height=Math.min(this.scrollHeight,120)+'px'; });
-speechSynthesis?.addEventListener('voiceschanged', ()=>{});
+document.getElementById('api-key-input').addEventListener('keydown',e=>{if(e.key==='Enter')startApp();});
+document.getElementById('text-input').addEventListener('input',function(){this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px';});
+speechSynthesis?.addEventListener('voiceschanged',()=>{});
 </script>
 </body>
 </html>
